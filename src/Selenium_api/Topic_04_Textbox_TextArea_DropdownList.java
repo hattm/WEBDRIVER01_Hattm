@@ -30,8 +30,6 @@ public class Topic_04_Textbox_TextArea_DropdownList {
 	By passwordTextbox = By.xpath("//input[@name='password']");
 	
 	
-	
-	
 	@BeforeClass
 	  public void beforeClass() {
 		  driver = new FirefoxDriver();
@@ -41,7 +39,7 @@ public class Topic_04_Textbox_TextArea_DropdownList {
 		  //DATA TEST(INPUNT)
 		  name = "Automation Test";
 		  bob ="1970-01-01";
-		  address ="123 le lai";
+		  address ="123 le loi";
 		  city ="HCM";
 		  state ="Bach dang";
 		  pin = "123456";
@@ -80,8 +78,8 @@ public class Topic_04_Textbox_TextArea_DropdownList {
   public void TC_02_Textbox_TextArea() {
 	  driver.get("http://demo.guru99.com/v4/");
 	  
-	  driver.findElement(By.xpath("//input[@name='uid']")).sendKeys("mngr305015");
-	  driver.findElement(By.xpath("//input[@name='password']")).sendKeys("amYjYtA");
+	  driver.findElement(By.xpath("//input[@name='uid']")).sendKeys("mngr313080");
+	  driver.findElement(By.xpath("//input[@name='password']")).sendKeys("uzapetY");
 	  driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
 	  
 	  Assert.assertTrue(driver.findElement(By.xpath("//marquee[Text()=\"Welcome To Manager's Page of Guru99 Bank\"]")).isDisplayed());
@@ -108,7 +106,6 @@ public class Topic_04_Textbox_TextArea_DropdownList {
 	  
 	  //VERIFY CREATE CUSTOMER SUCCESS
 	  Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Customer Name']//following-sibling::td")).getText(), name);
-	  Assert.assertTrue(driver.findElement(By.xpath("//td[text()='Customer Name']//following-sibling::td")).equals(name));
 	  Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Birthdate']//following-sibling::td")).getText(), bob);
 	  Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Address']//following-sibling::td")).getText(), address);
 	  Assert.assertEquals(driver.findElement(By.xpath("//td[text()='City']//following-sibling::td")).getText(), city);
@@ -151,17 +148,8 @@ public class Topic_04_Textbox_TextArea_DropdownList {
 	  //VERIFY EDIT CUSTOMER SUCCESS
 	  Assert.assertEquals(driver.findElement(By.xpath("//td[text()='Address']/following-sibling::td")).getText(), newAddress);
 	  Assert.assertEquals(driver.findElement(By.xpath("//td[text()='City']/following-sibling::td")).getText(), newCity);
-	  
-	  
-	  
-		
-	  
-	  
-	  
-	  
-
+	   
   }
-  
 
   @AfterClass
   public void afterClass() {
