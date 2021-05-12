@@ -70,7 +70,12 @@ public class Topic_04_Textbox_TextArea_DropdowList {
 		Assert.assertEquals(jobItems, 10);
 
 	}
-
+	/* xử lý textbox/ textarea
+	 * Step 01- Access vào trang http://demo.guru99.com/v4
+	 * Step 02- Đăng nhập với thông tin: User = mngr313080/Pass = uzapetY
+	 * Step 03- Chọn menu New Customer
+	 * Step 04- Nhập toàn bộ dữ liệu đúng -> click submit
+	 * */
 	@Test
 	public void TC_02_Textbox_TextArea() {
 		driver.get("http://demo.guru99.com/v4");
